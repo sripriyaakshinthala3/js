@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="text"></div>
+
+    <script>
+        var users = ['harshil', 'soham', 'priya'];
+        var age = [16, 14, 22];
+        var favouritesport = ['cricket', 'basketball', 'badminton'];
+        
+
+        var text = document.getElementById('text');
+        var table =
+            '<table align="center"><thead><tr><th>Name</th><th>Age</th><th>Favourite Sport</th></tr></thead><tbody>';
+
+        for (var i = 0; i < users.length; i++) {
+            table += '<tr><td>' + users[i] + '</td><td>' + age[i] + '</td><td>' + favouritesport[i] + '</td></tr>';
+        }
+
+        table += '</tbody></table>';
+
+        text.innerHTML = table;
+    </script>
+</body>
+</html>
